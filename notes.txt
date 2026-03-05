@@ -1,0 +1,21 @@
+            ##             ####             ##            
+            ##          ###    ###          ##            
+             ###     ####        ####     ###             
+               ######                ######               
+                                                          
+
+              Welcome to React Native 0.84.1!                
+                 Learn once, write anywhere               
+
+✔ Downloading template
+✔ Copying template
+✔ Processing template
+✔ Installing dependencies
+✔ Initializing Git repository
+
+  
+  Run instructions for Android:
+    • Have an Android emulator running (quickest way to get started), or a device connected.
+    • cd "/home/surya/dev/appathon/EcoGreenCampusApp" && npx react-native run-android
+  
+  
