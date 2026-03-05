@@ -4,6 +4,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 
 type RootStackParamList = {
   Splash: undefined;
+  WalkthroughPage1: undefined;
   MainApp: undefined;
 };
 
@@ -16,7 +17,7 @@ const useAppStartup = () => {
       const initializeApp = async () => {
         await new Promise<void>(resolve => setTimeout(() => resolve(), 2000));
         setIsLoading(false);
-        navigation.replace('MainApp');
+        navigation.replace('WalkthroughPage1');
       };
 
       initializeApp();

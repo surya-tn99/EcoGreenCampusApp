@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#2e7f32",
+                "background-light": "#f6f8f6",
+                "background-dark": "#141e15",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<title>EcoCampus - Onboarding</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar / Header -->
+<header class="flex items-center justify-end p-6">
+<button class="text-primary font-semibold text-base transition-opacity hover:opacity-80">
+                Skip
+            </button>
+</header>
+<!-- Main Content Area -->
+<main class="flex flex-1 flex-col items-center justify-center px-6 @container">
+<!-- Illustration Container -->
+<div class="w-full max-w-md aspect-square mb-12 relative">
+<div class="w-full h-full rounded-3xl bg-primary/10 flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern eco-friendly campus with solar panels and trees" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWE34J9xNmu2TrCM0ubsBzKDRz95ShhOeDsVBQNe2TPoRg9rxTzWZi55IJpCym9rgJfapHE2bizxVNP--YT_SAatiJCpwOoPg7j1evkYdi56skEpg_yuggRO2ZCnFxhBKuOSCetO7-8u58Xw4QfyZlMAj1ua23h6E5PP1906P2Prb1kSt9LxaWAwghZ5JtAFbDCXihhsUixkcoJqCIsOU32BKm63TTwoNuXSnzT_ID_JlJ3TqBXp82zhg7woagAnb7EhyVnVq_93A');">
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="text-center space-y-4 max-w-sm">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+                    Track Sustainability Activities
+                </h1>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Record eco-friendly actions like recycling, saving energy, and planting trees across your campus.
+                </p>
+</div>
+<!-- Pagination Indicator -->
+<div class="flex flex-row items-center justify-center gap-2.5 mt-10">
+<div class="h-2.5 w-6 rounded-full bg-primary"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20 dark:bg-primary/40"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20 dark:bg-primary/40"></div>
+</div>
+</main>
+<!-- Footer Actions -->
+<footer class="p-8 flex flex-col items-center">
+<button class="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group">
+                Next
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</footer>
+</div>
+</body></html>

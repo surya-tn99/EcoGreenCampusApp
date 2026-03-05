@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7f32",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden pb-24">
+<!-- Header -->
+<header class="p-6 bg-gradient-to-br from-primary/10 to-primary/5 rounded-b-3xl">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-1">
+    <!-- here in the below line Jeeva is the username (for example jeeva@gmail.com menas his name is Jeeva) -->
+<h1 class="text-xl font-bold tracking-tight">Good Morning, Jeeva 🌱</h1>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm filled-icon">energy_savings_leaf</span>
+                            120 Eco Score
+                        </span>
+</div>
+</div>
+<a class="size-12 rounded-full border-2 border-primary/20 p-0.5 overflow-hidden block hover:opacity-80 transition-opacity" href="#profile">
+<img alt="User profile avatar" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1_YsVMkllGb1L-GFekbtZKQr2HLgkslaOvlQEwd69aSKJQr-q9pRztnMKX_5z_sI22eOCxksyliT6TVooRvTfGvGWdjbDRPUMEVA27jNgIsLq4x5-vwUSyA01Xpf5wojh5AhJeaIcDHDogpgjk4KnRzAHgIcs14tl6RFigX-H-t3yeeygreJvHSu92ioWBlWYDtGIZlXwW-ugzvspeDJtTZMKGhCpilcB7zvDinYh0Q2qJtmB4UtxUmzvPJTQNTjb54Tg6HzWerQ"/>
+</a>
+</div>
+</header>
+<!-- Eco Tip Card -->
+<div class="px-6 -mt-6">
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-xl shadow-primary/5 border border-primary/5 flex gap-4">
+<div class="bg-primary/10 text-primary p-3 rounded-xl h-fit">
+<span class="material-symbols-outlined text-3xl">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-bold text-slate-900 dark:text-white">Eco Tip of the Day 🌿</h2>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Turn off lights when leaving a room to save electricity.</p>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<section class="px-6 mt-8">
+<h3 class="text-lg font-bold mb-4">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span class="text-sm">Log Activity</span>
+</button>
+<button class="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg">potted_plant</span>
+<span class="text-sm">View Initiatives</span>
+</button>
+</div>
+</section>
+<!-- Eco Activities -->
+<section class="px-6 mt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Eco Activities</h3>
+<a class="text-primary text-sm font-semibold" href="#">See All</a>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Activity 1 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col items-center text-center gap-2">
+<div class="bg-green-100 dark:bg-green-900/30 text-green-600 p-3 rounded-full">
+<span class="material-symbols-outlined">park</span>
+</div>
+<p class="font-semibold text-sm">Plant Tree</p>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-0.5 rounded-full">+20 Points</span>
+</div>
+<!-- Activity 2 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col items-center text-center gap-2">
+<div class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 p-3 rounded-full">
+<span class="material-symbols-outlined">recycling</span>
+</div>
+<p class="font-semibold text-sm">Recycle Waste</p>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-0.5 rounded-full">+10 Points</span>
+</div>
+<!-- Activity 3 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col items-center text-center gap-2">
+<div class="bg-orange-100 dark:bg-orange-900/30 text-orange-600 p-3 rounded-full">
+<span class="material-symbols-outlined">pedal_bike</span>
+</div>
+<p class="font-semibold text-sm">Use Bicycle</p>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-0.5 rounded-full">+5 Points</span>
+</div>
+<!-- Activity 4 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col items-center text-center gap-2">
+<div class="bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 p-3 rounded-full">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<p class="font-semibold text-sm">Save Water</p>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-0.5 rounded-full">+8 Points</span>
+</div>
+</div>
+</section>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 size-14 bg-primary text-white rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center z-50">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Tab Nav -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-8 py-3 z-40">
+<div class="flex justify-between items-center"><a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled-icon">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">eco</span>
+<span class="text-[10px] font-medium">Activities</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] font-medium">Leaderboard</span>
+</a></div>
+</nav>
+</div>
+</body></html>

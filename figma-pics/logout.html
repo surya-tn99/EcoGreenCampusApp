@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7f32",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .eco-pattern {
+            background-color: #f6f8f6;
+            background-image: radial-gradient(#2e7f32 0.5px, transparent 0.5px), radial-gradient(#2e7f32 0.5px, #f6f8f6 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.05;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex flex-col items-center justify-start min-h-screen w-full overflow-x-hidden pb-12">
+<div class="fixed inset-0 eco-pattern pointer-events-none"></div>
+<div class="relative w-full max-w-md px-6 pt-8 flex flex-col items-center">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">nature_people</span>
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">EcoCampus 🍃</h1>
+</div>
+<div class="w-full aspect-video rounded-xl mb-8 overflow-hidden shadow-sm bg-primary/10 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Students happily planting small green trees together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKLeaNRc5Gsn_FfWXd1oJWUiJHKYZIooBYC8ylAt3aAil34SuTgVSuGXl3xzpH4AY6j6cGX_zb9NEqC8fMgM57chwetNypRRuNmQEmw7LAMYEdJq_4Z3qs4JdFXWLvj1IeuWXDMqZf52D33BL3b7c-Q_ROO-to5LSx3jTkBwnmA_qioibqab2ToWPe2w3UfXyTJp9xI8d9AyJqgroK7hu3Fxda0UyYzrEgQPks7ox3YLiEYcQTvcGt3vxyTvPYXP2SEl409BceQGE"/>
+</div>
+<div class="text-center mb-8">
+<h2 class="text-2xl font-bold mb-2">Join the movement</h2>
+<p class="text-slate-600 dark:text-slate-400">Join the movement for a greener campus</p>
+</div>
+<div class="w-full bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-primary/5 p-8 border border-primary/10">
+<form class="space-y-4">
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">person</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Email Address</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">mail</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="name@university.edu" type="email"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Phone Number</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">call</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Password</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">lock</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Confirm Password</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">lock_reset</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<button class="w-full py-4 mt-4 bg-gradient-to-r from-primary to-green-600 text-white font-bold rounded-lg shadow-lg shadow-primary/30 hover:shadow-primary/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group" type="submit">
+<span>Create Account</span>
+</button>
+<div class="relative py-4 flex items-center">
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+<span class="flex-shrink mx-4 text-xs font-bold text-slate-400 uppercase tracking-widest">OR</span>
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+</div>
+<button class="w-full py-3 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center justify-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" type="button">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Official Google search icon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6VVzEtunw26fdpMnlO57asE1qj-06DLZexudMWgifi8sRQWK8w68jXsLSeCYPI0zeQoAyxhdqeVemG98UK8H6GMB1onZt9nZUEZooC3hXJ7-M8lzpObCc8ZoVVB5Wds7lgIiETaLKGvggCy5NJEFQqZiqXyGdWXJiYimaN3bKqQwsCEUApnrQ1Bh6j4SPlDF5-w6v_Gj1XHNoRDyz4qrhgVEm_NnDx7RW7ZhyR6bT3PKPJzdfDhat1InuoI-fsXC5wP1dxvdwCpk"/>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Continue with Google</span>
+</button>
+</form>
+<p class="text-[10px] text-center text-slate-500 mt-6 leading-relaxed">
+                    By creating an account you agree to our <br/>
+<a class="text-primary hover:underline font-semibold" href="#">Terms &amp; Privacy Policy</a>
+</p>
+</div>
+<div class="mt-8 text-center">
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                    Already have an account? 
+                    <a class="text-primary font-bold hover:underline ml-1" href="#">Login</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>

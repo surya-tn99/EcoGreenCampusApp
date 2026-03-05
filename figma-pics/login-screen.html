@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7f32",
+                        "secondary": "#66BB6A",
+                        "background-light": "#f1f8e9",
+                        "background-dark": "#141e15",
+                        "accent": "#a5d6a7",
+                        "eco-text": "#1b5e20"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .eco-gradient {
+            background: linear-gradient(135deg, #2e7f32 0%, #66BB6A 100%);
+        }
+        .soft-bg-shape {
+            position: absolute;
+            z-index: -1;
+            filter: blur(40px);
+            opacity: 0.4;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-eco-text min-h-screen relative overflow-x-hidden">
+<!-- Decorative Background Elements -->
+<div class="soft-bg-shape bg-accent w-64 h-64 rounded-full -top-20 -left-20"></div>
+<div class="soft-bg-shape bg-primary/20 w-80 h-80 rounded-full top-1/2 -right-20"></div>
+<div class="flex flex-col items-center justify-center min-h-screen p-4">
+<!-- Top Section (Branding) -->
+<div class="w-full max-w-md text-center mb-8">
+<div class="inline-flex items-center justify-center p-6 rounded-full bg-gradient-to-br from-accent/30 to-primary/10 mb-6">
+<div class="text-primary flex items-center justify-center" style="font-size: 64px;">
+<span class="material-symbols-outlined !text-6xl">eco</span>
+</div>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-eco-text dark:text-slate-100">EcoCampus</h1>
+<p class="mt-2 text-eco-text/80 dark:text-slate-300 max-w-[280px] mx-auto">Track your green impact and build a sustainable campus</p>
+</div>
+<!-- Login Form Card -->
+<div class="w-full max-w-md bg-white dark:bg-slate-900/50 backdrop-blur-sm rounded-2xl shadow-xl border border-primary/10 p-8">
+<form class="space-y-6">
+<!-- Email/Phone Field -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-eco-text dark:text-slate-200 ml-1">Email or Phone Number</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-primary/60 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-background-light dark:bg-slate-800 border-transparent rounded-xl text-eco-text dark:text-white placeholder:text-eco-text/40 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="name@campus.edu" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center ml-1">
+<label class="block text-sm font-semibold text-eco-text dark:text-slate-200">Password</label>
+<a class="text-xs font-bold text-primary hover:text-secondary transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-primary/60 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="block w-full pl-11 pr-12 py-4 bg-background-light dark:bg-slate-800 border-transparent rounded-xl text-eco-text dark:text-white placeholder:text-eco-text/40 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-4 flex items-center text-primary/40 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Login Button -->
+<button class="eco-gradient w-full py-4 rounded-xl text-white font-bold text-lg shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined animate-spin text-[22px]">nest_eco_leaf</span>
+<span>Logging you in...</span>
+</button>
+<!-- OR Divider -->
+<div class="relative py-2">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-primary/10"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase">
+<span class="bg-white dark:bg-slate-900 px-4 text-eco-text/40 font-bold">OR</span>
+</div>
+</div>
+<!-- Social/Signup -->
+<div class="text-center">
+<p class="text-sm text-eco-text/60 dark:text-slate-400 mb-4">Don't have an account?</p>
+<button class="w-full py-3 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary/5 transition-all" type="button">
+                        Sign Up Now
+                    </button>
+</div>
+</form>
+</div>
+<!-- Floating Decorative Icons -->
+<div class="mt-12 flex gap-8 text-primary/20">
+<span class="material-symbols-outlined text-4xl">energy_savings_leaf</span>
+<span class="material-symbols-outlined text-4xl">recycling</span>
+<span class="material-symbols-outlined text-4xl">water_drop</span>
+</div>
+</div>
+<!-- Background Leaf Elements -->
+<div class="fixed bottom-[-5%] left-[-5%] text-primary/5 pointer-events-none select-none">
+<span class="material-symbols-outlined !text-[300px]">eco</span>
+</div>
+<div class="fixed top-[-5%] right-[-5%] text-accent/10 pointer-events-none select-none rotate-180">
+<span class="material-symbols-outlined !text-[250px]">eco</span>
+</div>
+</body></html>

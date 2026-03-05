@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EcoCampus Onboarding - Get Started</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7f32",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Area -->
+<div class="flex items-center justify-end p-6">
+<button class="text-primary font-medium text-sm px-4 py-2 hover:bg-primary/10 rounded-full transition-colors">
+                Skip
+            </button>
+</div>
+<!-- Content Container -->
+<div class="flex flex-col grow items-center justify-center px-6 max-w-md mx-auto w-full">
+<!-- Illustration Component -->
+<div class="w-full aspect-square mb-12 flex items-center justify-center relative">
+<div class="absolute inset-0 bg-primary/10 rounded-full scale-90 blur-3xl"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl shadow-sm z-10" data-alt="Group of students planting trees together in campus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxDExOcujXsa00T0dzAlzOKLu0llnwW2H1b9q1206ouPAzdpdAsK1_zU1jfqrYpfNYFgf9UG9XydeZZ5FcVIdlucevjEg2KiHbWpGRfE0hoX--n7J7VOLpK6DivGshWUMGL968rLiOB0MwgdM5BXiRmSvET7jXWCsObmyQG6pTYkO0UPMmbPHoH9Zu2cA_pK3UsABi9kiFelg7JF62CzxkTHBGZZw9oIvuXMLIBPTXIfLEctErquRUdarkfoAatGg7pTedOhOvY-A");'>
+</div>
+</div>
+<!-- Text Content -->
+<div class="text-center space-y-4">
+<h1 class="text-slate-900 dark:text-slate-100 text-[32px] font-bold leading-tight tracking-tight">
+                    Build a Greener Campus
+                </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed px-2">
+                    Join sustainability initiatives and help create a cleaner and greener future for everyone.
+                </p>
+</div>
+<!-- Pagination Dots -->
+<div class="flex flex-row items-center justify-center gap-3 py-10">
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-6 rounded-full bg-primary"></div>
+</div>
+<!-- Action Area -->
+<div class="w-full pb-12 mt-auto">
+<button class="w-full bg-primary text-white font-semibold py-4 rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+                    Get Started
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
