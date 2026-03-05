@@ -147,12 +147,12 @@ const HomeScreen = () => {
             </ScrollView>
 
             {/* Floating Action Button */}
-            <TouchableOpacity style={styles.fab}>
+            {/* <TouchableOpacity style={styles.fab}>
                 <View style={{ width: 30, height: 30, alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ width: 24, height: 4, backgroundColor: '#FFF', borderRadius: 2 }} />
                     <View style={{ position: 'absolute', width: 4, height: 24, backgroundColor: '#FFF', borderRadius: 2 }} />
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </SafeAreaView>
     );
 };
