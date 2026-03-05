@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus Complaint Center - EcoCampus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7f32",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="max-w-md mx-auto min-h-screen flex flex-col bg-white dark:bg-slate-900 shadow-xl overflow-hidden">
+<!-- Header Section -->
+<header class="p-4 border-b border-primary/10">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg text-primary">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Campus Complaint Center</h1>
+</div>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Report issues and help maintain a clean and sustainable campus for everyone.
+            </p>
+</header>
+<!-- Main Content Scrollable Area -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Category Selection -->
+<section class="py-4">
+<h2 class="px-4 text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Select Category</h2>
+<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4">
+<span class="material-symbols-outlined text-xl">delete</span>
+<p class="text-sm font-medium">Waste</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 dark:bg-primary/20 text-slate-700 dark:text-slate-200 px-4 border border-primary/10">
+<span class="material-symbols-outlined text-xl text-primary">water_drop</span>
+<p class="text-sm font-medium">Water</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 dark:bg-primary/20 text-slate-700 dark:text-slate-200 px-4 border border-primary/10">
+<span class="material-symbols-outlined text-xl text-primary">bolt</span>
+<p class="text-sm font-medium">Electricity</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 dark:bg-primary/20 text-slate-700 dark:text-slate-200 px-4 border border-primary/10">
+<span class="material-symbols-outlined text-xl text-primary">block</span>
+<p class="text-sm font-medium">Plastic</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 dark:bg-primary/20 text-slate-700 dark:text-slate-200 px-4 border border-primary/10">
+<span class="material-symbols-outlined text-xl text-primary">build</span>
+<p class="text-sm font-medium">Infra</p>
+</button>
+</div>
+</section>
+<!-- Complaint Form Card -->
+<section class="px-4 mt-2">
+<div class="bg-background-light dark:bg-slate-800/50 rounded-xl p-5 border border-primary/5">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_document</span>
+                        Complaint Details
+                    </h3>
+<div class="space-y-4">
+<!-- Complaint Title -->
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-1 ml-1">Complaint Title</label>
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3 text-sm" placeholder="Short summary of the issue" type="text"/>
+</div>
+<!-- Category Dropdown (Mocked) -->
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-1 ml-1">Complaint Category</label>
+<div class="relative">
+<select class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3 text-sm appearance-none">
+<option>Waste Management</option>
+<option>Water Leakage</option>
+<option>Electricity Misuse</option>
+<option>Plastic Usage</option>
+<option>Damaged Infrastructure</option>
+<option>Other Issues</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Location -->
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-1 ml-1">Location</label>
+<div class="relative">
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3 text-sm pl-10" placeholder="e.g. Block A, Library" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-primary text-xl">location_on</span>
+</div>
+</div>
+<!-- Description -->
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-1 ml-1">Description</label>
+<textarea class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3 text-sm" placeholder="Provide more details about the issue..." rows="4"></textarea>
+</div>
+<!-- Upload Photo -->
+<div class="pt-2">
+<button class="w-full flex flex-col items-center justify-center gap-2 border-2 border-dashed border-primary/30 rounded-xl py-6 bg-white dark:bg-slate-900 hover:bg-primary/5 transition-colors group">
+<div class="p-3 bg-primary/10 rounded-full text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-300">Upload Image</span>
+<span class="text-xs text-slate-400">Max file size 5MB</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action & Navigation -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+<!-- Submit Button Area -->
+<div class="px-4 py-3 border-t border-primary/5">
+<button class="w-full py-4 bg-gradient-to-r from-primary to-green-600 text-white font-bold rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">send</span>
+                    Submit Complaint
+                </button>
+</div>
+<!-- Navigation Bar -->
+<nav class="flex justify-around items-center px-4 pb-4 pt-1 border-t border-slate-100 dark:border-slate-800">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">description</span>
+<span class="text-[10px] font-medium uppercase">Reports</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-[10px] font-medium uppercase">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-medium uppercase">Profile</span>
+</a>
+</nav>
+</div>
+</div>
+</body></html>

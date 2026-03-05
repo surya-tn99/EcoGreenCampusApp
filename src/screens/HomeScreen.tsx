@@ -9,54 +9,53 @@ import {
     SafeAreaView,
     StatusBar,
 } from 'react-native';
-import Svg, { Path, Circle, Rect } from 'react-native-svg';
 
-const LeafIcon = ({ color = '#2e7f32', size = 16 }) => (
-    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <Path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7 7 0 0 1-9 10Z" />
-        <Path d="M7 21c0-6.05 2-10 7-15" />
-    </Svg>
+const LeafIcon = ({ color = '#2e7f32', size = 16 }: { color?: string, size?: number }) => (
+
+    <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ width: size * 0.8, height: size * 0.8, borderTopLeftRadius: size * 0.8, borderBottomRightRadius: size * 0.8, borderWidth: size * 0.1, borderColor: color, backgroundColor: 'rgba(46, 127, 50, 0.2)' }} />
+    </View>
 );
 
-const BulbIcon = ({ color = '#2e7f32', size = 30 }) => (
-    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <Path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5" />
-        <Path d="M9 18h6" />
-        <Path d="M10 22h4" />
-    </Svg>
+const BulbIcon = ({ color = '#2e7f32', size = 30 }: { color?: string, size?: number }) => (
+
+    <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ width: size * 0.5, height: size * 0.5, borderRadius: size * 0.25, borderWidth: 2, borderColor: color }} />
+        <View style={{ width: size * 0.3, height: size * 0.1, backgroundColor: color, marginTop: 2 }} />
+    </View>
 );
 
-const ActivityIcon = ({ type, color = '#2e7f32', size = 24 }) => {
+const ActivityIcon = ({ type, color = '#2e7f32', size = 24 }: { type: string, color?: string, size?: number }) => {
+
+    const iconBaseStyle: any = { width: size, height: size, alignItems: 'center', justifyContent: 'center' };
     switch (type) {
         case 'park':
             return (
-                <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <Path d="M12 2v8" />
-                    <Path d="M9 21v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5" />
-                    <Path d="M12 10L6 10C4 10 3 11 3 13C3 15 5 15 5 15L5 18L19 18L19 15C19 15 21 15 21 13C21 11 20 10 18 10L12 10Z" />
-                </Svg>
+                <View style={iconBaseStyle}>
+                    <View style={{ width: 0, height: 0, borderLeftWidth: size * 0.4, borderRightWidth: size * 0.4, borderBottomWidth: size * 0.6, borderLeftColor: 'transparent', borderRightColor: 'transparent', borderBottomColor: color }} />
+                    <View style={{ width: size * 0.15, height: size * 0.3, backgroundColor: color }} />
+                </View>
             );
         case 'recycle':
             return (
-                <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <Path d="M7 11V7l-5 5 5 5v-4h3a7 7 0 0 1 7 7h2a9 9 0 0 0-9-9H7Z" />
-                    <Path d="M17 13v4l5-5-5-5v4h-3a7 7 0 0 0-7-7H5a9 9 0 0 1 9 9h3Z" />
-                </Svg>
+                <View style={iconBaseStyle}>
+                    <View style={{ width: size * 0.6, height: size * 0.6, borderRadius: size * 0.3, borderWidth: 2, borderColor: color, borderStyle: 'dotted' }} />
+                </View>
             );
         case 'bike':
             return (
-                <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <Circle cx="5.5" cy="17.5" r="3.5" />
-                    <Circle cx="18.5" cy="17.5" r="3.5" />
-                    <Path d="M15 13.5L13.5 9v1.5h-5V9l-1.5 4.5" />
-                    <Path d="M16 11l-2-2 1-1" />
-                </Svg>
+                <View style={iconBaseStyle}>
+                    <View style={{ flexDirection: 'row', gap: 4 }}>
+                        <View style={{ width: size * 0.35, height: size * 0.35, borderRadius: size * 0.175, borderWidth: 2, borderColor: color }} />
+                        <View style={{ width: size * 0.35, height: size * 0.35, borderRadius: size * 0.175, borderWidth: 2, borderColor: color }} />
+                    </View>
+                </View>
             );
         case 'water':
             return (
-                <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <Path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z" />
-                </Svg>
+                <View style={iconBaseStyle}>
+                    <View style={{ width: size * 0.4, height: size * 0.6, borderRadius: size * 0.2, backgroundColor: color, transform: [{ scaleY: 1.5 }] }} />
+                </View>
             );
         default:
             return null;
@@ -64,6 +63,13 @@ const ActivityIcon = ({ type, color = '#2e7f32', size = 24 }) => {
 };
 
 const HomeScreen = () => {
+    const [ecoScore, setEcoScore] = React.useState(120);
+
+    const handleActivityPress = (points: string) => {
+        const pts = parseInt(points.replace(/[^0-9]/g, ''));
+        setEcoScore(prev => prev + pts);
+    };
+
     return (
         <SafeAreaView style={styles.safeArea}>
             <StatusBar barStyle="dark-content" backgroundColor="#f6f8f6" />
@@ -74,7 +80,7 @@ const HomeScreen = () => {
                         <Text style={styles.greeting}>Good Morning, Jeeva 🌱</Text>
                         <View style={styles.scoreBadge}>
                             <LeafIcon color="#FFF" size={12} />
-                            <Text style={styles.scoreText}>120 Eco Score</Text>
+                            <Text style={styles.scoreText}>{ecoScore} Eco Score</Text>
                         </View>
                     </View>
                     <TouchableOpacity style={styles.profileContainer}>
@@ -97,67 +103,134 @@ const HomeScreen = () => {
                 </View>
 
                 {/* Quick Actions */}
-                <View style={styles.section}>
+                {/* <View style={styles.section}>
                     <Text style={styles.sectionTitle}>Quick Actions</Text>
                     <View style={styles.quickActionsGrid}>
                         <TouchableOpacity style={styles.actionButton}>
-                            <Svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#FFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                <Path d="M12 5v14M5 12h14" />
-                            </Svg>
+                            <View style={{ width: 18, height: 18, alignItems: 'center', justifyContent: 'center' }}>
+                                <View style={{ width: 14, height: 2, backgroundColor: '#FFF' }} />
+                                <View style={{ position: 'absolute', width: 2, height: 14, backgroundColor: '#FFF' }} />
+                            </View>
                             <Text style={styles.actionButtonText}>Log Activity</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.actionButton}>
-                            <Svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <Path d="M12 3v10" />
-                                <Path d="M16.7 8a5.5 5.5 0 0 0-9.4 0" />
-                                <Path d="M2 22l4-4" />
-                                <Path d="M22 22l-4-4" />
-                            </Svg>
+                            <View style={{ width: 18, height: 18, alignItems: 'center', justifyContent: 'center' }}>
+                                <View style={{ width: 12, height: 12, borderRadius: 6, borderWidth: 2, borderColor: '#FFF' }} />
+                            </View>
                             <Text style={styles.actionButtonText}>View Initiatives</Text>
                         </TouchableOpacity>
-                    </View> section
-                </View>
+                    </View>
+                </View> */}
 
-                {/* Eco Activities */}
+                {/* Activity Graph */}
                 <View style={styles.section}>
                     <View style={styles.sectionHeader}>
-                        <Text style={styles.sectionTitle}>Eco Activities</Text>
-                        <TouchableOpacity>
-                            <Text style={styles.seeAllText}>See All</Text>
-                        </TouchableOpacity>
+                        <Text style={styles.sectionTitle}>Weekly Activity</Text>
+                        <View style={styles.legend}>
+                            <View style={[styles.legendDot, { backgroundColor: '#2e7f32' }]} />
+                            <Text style={styles.legendText}>Points</Text>
+                        </View>
                     </View>
-                    <View style={styles.activitiesGrid}>
-                        <ActivityCard icon="park" title="Plant Tree" points="+20 Points" bgColor="#e8f5e9" iconColor="#2e7f32" />
-                        <ActivityCard icon="recycle" title="Recycle Waste" points="+10 Points" bgColor="#e3f2fd" iconColor="#1976d2" />
-                        <ActivityCard icon="bike" title="Use Bicycle" points="+5 Points" bgColor="#fff3e0" iconColor="#f57c00" />
-                        <ActivityCard icon="water" title="Save Water" points="+8 Points" bgColor="#e0f7fa" iconColor="#0097a7" />
-                    </View>
+                    <ActivityGraph />
                 </View>
 
-                <View style={{ height: 100 }} />
+                {/* Eco Activity Distribution Graph */}
+                <View style={styles.section}>
+                    <View style={styles.sectionHeader}>
+                        <Text style={styles.sectionTitle}>Activity Distribution</Text>
+                    </View>
+                    <EcoActivityDistributionGraph />
+                </View>
+
+
+
             </ScrollView>
 
             {/* Floating Action Button */}
             <TouchableOpacity style={styles.fab}>
-                <Svg width={30} height={30} viewBox="0 0 24 24" fill="none" stroke="#FFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <Path d="M12 5v14M5 12h14" />
-                </Svg>
+                <View style={{ width: 30, height: 30, alignItems: 'center', justifyContent: 'center' }}>
+                    <View style={{ width: 24, height: 4, backgroundColor: '#FFF', borderRadius: 2 }} />
+                    <View style={{ position: 'absolute', width: 4, height: 24, backgroundColor: '#FFF', borderRadius: 2 }} />
+                </View>
             </TouchableOpacity>
         </SafeAreaView>
     );
 };
 
-const ActivityCard = ({ icon, title, points, bgColor, iconColor }) => (
-    <TouchableOpacity style={styles.activityCard}>
-        <View style={[styles.activityIconWrapper, { backgroundColor: bgColor }]}>
-            <ActivityIcon type={icon} color={iconColor} />
+const ActivityGraph = () => {
+    const data = [
+        { day: 'Mon', points: 30 },
+        { day: 'Tue', points: 45 },
+        { day: 'Wed', points: 20 },
+        { day: 'Thu', points: 60 },
+        { day: 'Fri', points: 35 },
+        { day: 'Sat', points: 50 },
+        { day: 'Sun', points: 40 },
+    ];
+
+    const maxPoints = 80;
+
+    return (
+        <View style={styles.graphCard}>
+            <View style={styles.yAxis}>
+                <Text style={styles.yAxisLabel}>80</Text>
+                <Text style={styles.yAxisLabel}>40</Text>
+                <Text style={styles.yAxisLabel}>0</Text>
+            </View>
+            <View style={styles.graphContent}>
+                <View style={styles.barsContainer}>
+                    {data.map((item, index) => (
+                        <View key={index} style={styles.barWrapper}>
+                            <View
+                                style={[
+                                    styles.bar,
+                                    { height: `${(item.points / maxPoints) * 100}%` }
+                                ]}
+                            />
+                            <Text style={styles.dayLabel}>{item.day}</Text>
+                        </View>
+                    ))}
+                </View>
+                {/* Horizontal grid lines */}
+                <View style={[styles.gridLine, { bottom: '0%' }]} />
+                <View style={[styles.gridLine, { bottom: '50%' }]} />
+                <View style={[styles.gridLine, { bottom: '100%' }]} />
+            </View>
         </View>
-        <Text style={styles.activityTitle}>{title}</Text>
-        <View style={styles.pointsBadge}>
-            <Text style={styles.pointsText}>{points}</Text>
+    );
+};
+
+const EcoActivityDistributionGraph = () => {
+    const data = [
+        { label: 'Waste', value: 35, color: '#1976d2' },
+        { label: 'Energy', value: 25, color: '#f57c00' },
+        { label: 'Water', value: 20, color: '#0097a7' },
+        { label: 'Plants', value: 20, color: '#2e7f32' },
+    ];
+
+    return (
+        <View style={styles.distributionCard}>
+            {data.map((item, index) => (
+                <View key={index} style={styles.distributionRow}>
+                    <View style={styles.distributionLabelContainer}>
+                        <Text style={styles.distributionLabel}>{item.label}</Text>
+                        <Text style={styles.distributionValue}>{item.value}%</Text>
+                    </View>
+                    <View style={styles.distributionTrack}>
+                        <View
+                            style={[
+                                styles.distributionFill,
+                                { width: `${item.value}%`, backgroundColor: item.color }
+                            ]}
+                        />
+                    </View>
+                </View>
+            ))}
         </View>
-    </TouchableOpacity>
-);
+    );
+};
+
+
 
 const styles = StyleSheet.create({
     safeArea: {
@@ -166,8 +239,10 @@ const styles = StyleSheet.create({
     },
     container: {
         paddingHorizontal: 20,
-        paddingTop: 20,
+        paddingTop: 50,
+        paddingBottom: 50,
     },
+
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -292,45 +367,123 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: 'bold',
     },
-    activitiesGrid: {
+    legend: {
         flexDirection: 'row',
-        flexWrap: 'wrap',
-        gap: 12,
-    },
-    activityCard: {
-        width: '48%',
-        backgroundColor: '#FFF',
-        borderRadius: 20,
-        padding: 16,
         alignItems: 'center',
+        gap: 6,
+    },
+    legendDot: {
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+    },
+    legendText: {
+        fontSize: 12,
+        color: '#64748b',
+        fontWeight: '500',
+    },
+    graphCard: {
+        backgroundColor: '#FFF',
+        borderRadius: 24,
+        padding: 24,
+        flexDirection: 'row',
+        height: 220,
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.03)',
+        shadowColor: '#2e7f32',
+        shadowOffset: { width: 0, height: 10 },
+        shadowOpacity: 0.05,
+        shadowRadius: 15,
+        elevation: 5,
     },
-    activityIconWrapper: {
-        width: 50,
-        height: 50,
-        borderRadius: 25,
+    yAxis: {
+        justifyContent: 'space-between',
+        paddingBottom: 25,
+        marginRight: 10,
+    },
+    yAxisLabel: {
+        fontSize: 10,
+        color: '#94a3b8',
+        fontWeight: 'bold',
+    },
+    graphContent: {
+        flex: 1,
+        position: 'relative',
+    },
+    barsContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-end',
+        zIndex: 2,
+    },
+    barWrapper: {
         alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 12,
+        width: 30,
+        height: '100%',
+        justifyContent: 'flex-end',
     },
-    activityTitle: {
-        fontSize: 14,
-        fontWeight: '600',
-        color: '#1e293b',
+    bar: {
+        width: 14,
+        backgroundColor: '#2e7f32',
+        borderRadius: 7,
         marginBottom: 8,
     },
-    pointsBadge: {
-        backgroundColor: 'rgba(46, 127, 50, 0.1)',
-        paddingHorizontal: 10,
-        paddingVertical: 4,
-        borderRadius: 12,
-    },
-    pointsText: {
-        fontSize: 11,
+    dayLabel: {
+        fontSize: 10,
+        color: '#64748b',
         fontWeight: 'bold',
-        color: '#2e7f32',
     },
+    gridLine: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        height: 1,
+        backgroundColor: '#f1f5f9',
+        zIndex: 1,
+    },
+    distributionCard: {
+        backgroundColor: '#FFF',
+        borderRadius: 24,
+        padding: 24,
+        borderWidth: 1,
+        borderColor: 'rgba(0,0,0,0.03)',
+        shadowColor: '#2e7f32',
+        shadowOffset: { width: 0, height: 10 },
+        shadowOpacity: 0.05,
+        shadowRadius: 15,
+        elevation: 5,
+        gap: 20,
+    },
+    distributionRow: {
+        gap: 8,
+    },
+    distributionLabelContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    distributionLabel: {
+        fontSize: 12,
+        fontWeight: 'bold',
+        color: '#1e293b',
+    },
+    distributionValue: {
+        fontSize: 12,
+        fontWeight: 'bold',
+        color: '#64748b',
+    },
+    distributionTrack: {
+        height: 8,
+        backgroundColor: '#f1f5f9',
+        borderRadius: 4,
+        overflow: 'hidden',
+    },
+    distributionFill: {
+        height: '100%',
+        borderRadius: 4,
+    },
+
     fab: {
         position: 'absolute',
         bottom: 30,

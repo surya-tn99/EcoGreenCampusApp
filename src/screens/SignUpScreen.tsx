@@ -87,7 +87,7 @@ const SignUpScreen = () => {
             <Text style={styles.title}>EcoCampus 🍃</Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          {/* <View style={styles.imageContainer}>
             <Image
               source={{
                 uri: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKLeaNRc5Gsn_FfWXd1oJWUiJHKYZIooBYC8ylAt3aAil34SuTgVSuGXl3xzpH4AY6j6cGX_zb9NEqC8fMgM57chwetNypRRuNmQEmw7LAMYEdJq_4Z3qs4JdFXWLvj1IeuWXDMqZf52D33BL3b7c-Q_ROO-to5LSx3jTkBwnmA_qioibqab2ToWPe2w3UfXyTJp9xI8d9AyJqgroK7hu3Fxda0UyYzrEgQPks7ox3YLiEYcQTvcGt3vxyTvPYXP2SEl409BceQGE',
@@ -95,7 +95,7 @@ const SignUpScreen = () => {
               style={styles.image}
               resizeMode="contain"
             />
-          </View>
+          </View> */}
 
           <View style={styles.textContainer}>
             <Text style={styles.heading}>Join the movement</Text>

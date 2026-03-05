@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import Svg, { Path, Circle, Rect, Line } from 'react-native-svg';
+
 
 
 
@@ -29,32 +29,33 @@ type RootStackParamList = {
 const SWIPE_THRESHOLD = 50;
 
 const UserIcon = ({ color = '#2e7f32', size = 18 }) => (
-  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <Path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-    <Circle cx="12" cy="7" r="4" />
-  </Svg>
+  <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ width: size * 0.4, height: size * 0.4, borderRadius: size * 0.2, borderWidth: 2, borderColor: color, marginBottom: 1 }} />
+    <View style={{ width: size * 0.8, height: size * 0.3, borderTopLeftRadius: size * 0.15, borderTopRightRadius: size * 0.15, borderWidth: 2, borderColor: color, borderBottomWidth: 0 }} />
+  </View>
 );
 
 const LockIcon = ({ color = '#2e7f32', size = 18 }) => (
-  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <Rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-    <Path d="M7 11V7a5 5 0 0 1 10 0v4" />
-  </Svg>
+  <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ width: size * 0.5, height: size * 0.4, borderTopLeftRadius: size * 0.25, borderTopRightRadius: size * 0.25, borderWidth: 2, borderColor: color, marginBottom: -2 }} />
+    <View style={{ width: size * 0.8, height: size * 0.5, borderRadius: 2, borderWidth: 2, borderColor: color }} />
+  </View>
 );
 
 const EyeIcon = ({ color = '#2e7f32', size = 18 }) => (
-  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <Path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-    <Circle cx="12" cy="12" r="3" />
-  </Svg>
+  <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ width: size * 0.9, height: size * 0.5, borderRadius: size * 0.25, borderWidth: 2, borderColor: color, transform: [{ rotate: '45deg' }] }} />
+    <View style={{ width: size * 0.3, height: size * 0.3, borderRadius: size * 0.15, backgroundColor: color }} />
+  </View>
 );
 
 const EyeOffIcon = ({ color = '#2e7f32', size = 18 }) => (
-  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <Path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
-    <Line x1="1" y1="1" x2="23" y2="23" />
-  </Svg>
+  <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ width: size * 0.9, height: size * 0.5, borderRadius: size * 0.25, borderWidth: 2, borderColor: color, opacity: 0.5 }} />
+    <View style={{ position: 'absolute', width: size, height: 2, backgroundColor: color, transform: [{ rotate: '45deg' }] }} />
+  </View>
 );
+
 
 
 const LoginScreen = () => {

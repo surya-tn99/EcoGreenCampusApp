@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7f32",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>EcoCampus Leaderboard</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<header class="bg-gradient-to-b from-primary/20 to-transparent pt-8 pb-6 px-6 text-center">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">arrow_back</span>
+<h1 class="text-xl font-bold text-primary">Eco Leaderboard 🏆</h1>
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-primary/20 cursor-pointer">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcinqTIFvJN-EabUIxfvNnfOW-ADlQh_V2X5KJi94lGu1INCABMyPNO3YUVbTnc5SZgmDuLjSZ01OpLhRjyCNn5rNkm8DP30_wvxLn6YXc5mXB-RmwhVdAOzzWPh14prh8XmvscFQr_6q4FONYCnL-p0P89g5LlztavMnvauVZVru7j6eG9zqLFttyK9hWDFR8dK6lOoB5WCjEfAm26YhjAw5KaIyvZcQ71R93QUmr3f46mwnL_Ku6XDuKa1RGSpynBYZxCfHgpMM"/>
+</div>
+</div>
+<h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-1">Top students making the campus greener</h2>
+<p class="text-primary font-medium text-sm">Earn eco points by completing sustainability activities.</p>
+</header>
+<!-- Podium Section -->
+<div class="flex items-end justify-center gap-2 px-4 mb-8 mt-4">
+<!-- Rank 2 -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-2">
+<div class="w-16 h-16 rounded-full border-4 border-slate-300 overflow-hidden bg-white shadow-sm" data-alt="Avatar of student Jeeva">
+<img alt="Jeeva" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA00UzW42hKojJhb4wL45uUYFfwC6-IO7ADwUoNPvKGpDpH-ESNhDG2G0XqWW22hJVmNU379Tz9Cbk7uz3FxbOwsjHb3xEHjg7bETI9nYefpIyOgZmDLsQmqslD8aSBwnjCrNwnMGsHOZ_ZtWirVCfgXeLthQXMkTp9LcQH1MTIuBlIt4jnit92zgPkeVXftn_YdSVj1g7JymT-AYpSGHHD38UQHo2D8DZvDe83gn28_kR76egMOB4JRjSm9eykOPoDtuTV4xwkVN4"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-300 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm">2nd</div>
+</div>
+<div class="bg-white dark:bg-slate-800 w-full rounded-t-lg pt-4 pb-2 px-1 text-center shadow-sm h-24 flex flex-col justify-end border-x border-t border-slate-100 dark:border-slate-700">
+<p class="font-bold text-xs truncate">Jeeva</p>
+<p class="text-primary text-sm font-bold">180</p>
+<p class="text-[10px] uppercase tracking-wider text-slate-400">pts</p>
+</div>
+</div>
+<!-- Rank 1 -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-3 scale-110">
+<div class="w-20 h-20 rounded-full border-4 border-yellow-400 overflow-hidden bg-white shadow-lg" data-alt="Avatar of top student Rahul">
+<img alt="Rahul" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEo-J2RshjH1_7IGBBpPLJtqqQ7k-Oaj5tlAI0L-JaQOOuXh4AGxJroisimlQMd9hasCpGjXCduQ8hPCAR8zSs4k0w5oMk3y1jkhHCvQkHq0_VRFF-VEwJ7Bno30NSNMKP2bdy7nm47KINCUlIbjDnN5quvxWYCsYLUj0-pUDNaRRuQgH6VKEHNrUoI8Zmicb9IybBJs2hlRYeelOfZIz1Dn2JxPc3RQg3BIq1uViyWPhNFOarVulHgxe7wvp20AzSVJ15_MBVe2Q"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow-md">1st</div>
+</div>
+<div class="bg-primary/10 dark:bg-primary/20 w-full rounded-t-xl pt-6 pb-4 px-1 text-center shadow-md h-32 flex flex-col justify-end border-x border-t border-primary/20">
+<p class="font-black text-sm truncate">Rahul</p>
+<p class="text-primary text-lg font-black">240</p>
+<p class="text-[10px] uppercase tracking-wider text-primary/60">pts</p>
+</div>
+</div>
+<!-- Rank 3 -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-2">
+<div class="w-16 h-16 rounded-full border-4 border-orange-400 overflow-hidden bg-white shadow-sm" data-alt="Avatar of student Ananya">
+<img alt="Ananya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsIYJQAuwFPocA2eYG3m1MCBL_0a0RypgRVFWnk802RuB9PHzeaSCJThdFawDFn1pOpWHjcX52M1rtFGp6bOnMKyrr27fk5JRURrYs5B5lmAR1RWDLyCuCI81rJXzMr3uAWV4dh2T6axVVXbMWz9KLTLmq-Y-0_bJsZzIHkcGx6LsEQhbxfJn5QHDLQEMa5zf6cNS2Nkn3jvry_p7Zrjvh_aCdS_ZuNP2jcqc92Afs0cuJb1n_xJI6wTq5hB0ePG01w9acg0iFGcg"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-orange-400 text-orange-950 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm">3rd</div>
+</div>
+<div class="bg-white dark:bg-slate-800 w-full rounded-t-lg pt-4 pb-2 px-1 text-center shadow-sm h-20 flex flex-col justify-end border-x border-t border-slate-100 dark:border-slate-700">
+<p class="font-bold text-xs truncate">Ananya</p>
+<p class="text-primary text-sm font-bold">150</p>
+<p class="text-[10px] uppercase tracking-wider text-slate-400">pts</p>
+</div>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 p-4 overflow-x-auto no-scrollbar justify-center">
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary px-5 text-white text-sm font-semibold shadow-sm">Today</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 px-5 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors">This Week</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 px-5 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors">This Month</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 px-5 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors">All Time</button>
+</div>
+<!-- Motivation Card -->
+<div class="mx-4 mb-6 p-4 bg-primary text-white rounded-xl shadow-lg relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div>
+<h3 class="font-bold text-lg mb-1 flex items-center gap-2">Keep Going 🌱</h3>
+<p class="text-white/80 text-sm">You are only 20 points away from the Top 3!</p>
+</div>
+<div class="bg-white/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-white">trending_up</span>
+</div>
+</div>
+<div class="mt-4 bg-white/20 h-2 rounded-full w-full relative z-10 overflow-hidden">
+<div class="bg-white h-full rounded-full w-[85%] shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">eco</span>
+</div>
+</div>
+<!-- Leaderboard List -->
+<div class="flex flex-col gap-2 px-4 pb-24">
+<!-- Rank 2 Highlighted (User Position) -->
+<div class="flex items-center gap-4 p-3 bg-primary/10 dark:bg-primary/30 border border-primary/20 rounded-xl">
+<div class="w-8 flex justify-center font-bold text-primary">#2</div>
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary" data-alt="User avatar - Jeeva">
+<img alt="Jeeva" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcinqTIFvJN-EabUIxfvNnfOW-ADlQh_V2X5KJi94lGu1INCABMyPNO3YUVbTnc5SZgmDuLjSZ01OpLhRjyCNn5rNkm8DP30_wvxLn6YXc5mXB-RmwhVdAOzzWPh14prh8XmvscFQr_6q4FONYCnL-p0P89g5LlztavMnvauVZVru7j6eG9zqLFttyK9hWDFR8dK6lOoB5WCjEfAm26YhjAw5KaIyvZcQ71R93QUmr3f46mwnL_Ku6XDuKa1RGSpynBYZxCfHgpMM"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<p class="font-bold">Jeeva</p>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">Your Position</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Eco Contributor</p>
+</div>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span>180</span>
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+</div>
+<!-- Rank 4 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center font-bold text-slate-400">#4</div>
+<div class="w-12 h-12 rounded-full overflow-hidden" data-alt="Avatar of Arjun">
+<img alt="Arjun" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwfLp2zPxSj0w_lBmleW_drt7SZI2hwuDcHHM5EvWdjHlMjKrXB07y-K_lWd3VJfnIJ14tJqfBFTfrYRIO-xN_7h3t2qzIkFswrMmE7RAcCCEDKQrHDQ_l1KXSHwcSBXPLIQwnBr2YCF7F72Ec8P_jLpX9b0L1EFWGwreZCkNJiTlmfhb5TjmMLbIqGZetvKn_iMhxkzewj6V9rzcIPLkMsT3XvEl6XRLBN5YJPOYij_TKw-3kn8bw8ayDVJ8q9OI_D6UWwIf2sSU"/>
+</div>
+<div class="flex-1">
+<p class="font-bold">Arjun</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Eco Contributor</p>
+</div>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span>130</span>
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+</div>
+<!-- Rank 5 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center font-bold text-slate-400">#5</div>
+<div class="w-12 h-12 rounded-full overflow-hidden" data-alt="Avatar of Meera">
+<img alt="Meera" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-YOwRHiw9MZ6rMSAhE0qe9jAEvYIqVRmNfmMhjJFQfMrWj-F1eY1EhobrhqsorjmRqzU2a11Th5FAF-MtGLf7Uy8ErR0E_XeB_QYVrZ05f_o8f21HK1P8badoALavAApqe5quoihc-QIx0ZvyfxrXT5-sbPC74305LqiRVEKaWCSTsqic_jrHvkF3MzudQaaAvGIuZlReFM0GBIj5-3h_7j69iGaNVSZOkGtfZ303oH62GIGWU0AF8Q25M4JOCsyS8Gkaf9ad9vk"/>
+</div>
+<div class="flex-1">
+<p class="font-bold">Meera</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Eco Contributor</p>
+</div>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span>120</span>
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+</div>
+<!-- Rank 6 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center font-bold text-slate-400">#6</div>
+<div class="w-12 h-12 rounded-full overflow-hidden" data-alt="Avatar of Karthik">
+<img alt="Karthik" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWOoJ_yvaaia0L91OrvFGn5K8Mp1K47SB1ZB7dQwwRo55Ti444n-mnDN-MWhoD5rOzQnNF3ncz-22vqadjUaXqkIxI801CCsSzdT1oY6NbRN3OKTBwprZ_4SmVNi_6JAH2IO5pdDe1YbFUhqgqOKBzbMsesYsdRTuDvPPdADqJwIrQef-Rgxta6Z6c1gY25bh-XIPjkGpKPXjdiG_r-sobkKziuyvgCIPWFvEtNWdZEjgXx5koIdS_ZEZSza1FY8QfSas3V4e21xY"/>
+</div>
+<div class="flex-1">
+<p class="font-bold">Karthik</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Eco Contributor</p>
+</div>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span>110</span>
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+</div>
+<!-- Rank 7 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center font-bold text-slate-400">#7</div>
+<div class="w-12 h-12 rounded-full overflow-hidden" data-alt="Avatar of Priya">
+<img alt="Priya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZNmfxr_CoNxwaN9GQYYQfiEmrJcqzPnkDl19wOWk44w9vFNjLX9N7CN39lxHsTDgJ9r59lLPM4z61FjnLObV8CcxJANiYFwhHpmctCCwPjLD5OUaWhONLQvWHnCaU0r0-z6lNmX5K4tH78PcS8tT5B3eM6Yi1k9XjMZZW3zha1pyNAO80w0d_Fu5lwVvtIth7QafOlB7tGtPAgQWBHUWrKDyXfd3fGJ_4yfTIcmMt276PqS4UCd9D293sQ47SEbgGMcW5Gp1mmo"/>
+</div>
+<div class="flex-1">
+<p class="font-bold">Priya</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Eco Contributor</p>
+</div>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span>95</span>
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+</div>
+<!-- Rank 8 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center font-bold text-slate-400">#8</div>
+<div class="w-12 h-12 rounded-full overflow-hidden" data-alt="Avatar of Sanjay">
+<img alt="Sanjay" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4kygHBVhCexSvRiCT6A-aG6hkCfdZ6KJ4G554fhpF4jzi1RKaX0a5IptvdFem2WSiYEhGuJ2zgTMQw05PKMKZ0iR9s8snGg7TMPxPVaDsq16AIxtPvaQDdypf7W3mCPH52bHQjMBdAnyn8wkjrVV9Gl4jE5iSWtT0g2-EDTsxdxz4yoSWNv3RudpGcxieyrgRRWlJKZs6A2LduAW7sikExBbMbcF8Yn22oZp8EhdY1O9p1vrFoyXXKkUmPQq0kt1jJaVFQbJ51gs"/>
+</div>
+<div class="flex-1">
+<p class="font-bold">Sanjay</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Eco Contributor</p>
+</div>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span>85</span>
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-transform z-20">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-30 flex items-center bg-background-light dark:bg-background-dark border-t border-primary/10 px-4 pb-4 pt-2 shadow-[0_-4px_10px_rgba(0,0,0,0.03)]"><a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary/60 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary/60 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">eco</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Activities</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-fill">trophy</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Leaderboard</p>
+</a></nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .font-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>
