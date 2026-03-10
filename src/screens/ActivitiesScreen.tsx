@@ -117,12 +117,16 @@ const ActivitiesScreen = () => {
                     <Text style={styles.headerTitle}>Eco Activities 🌱</Text>
                     <Text style={styles.headerSubtitle}>Choose an activity and earn eco points</Text>
                 </View>
-                <TouchableOpacity style={styles.profileContainer}>
+                <TouchableOpacity
+                    style={styles.profileContainer}
+                    onPress={() => navigation.navigate('Profile')}
+                >
                     <Image
                         source={{ uri: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB1_YsVMkllGb1L-GFekbtZKQr2HLgkslaOvlQEwd69aSKJQr-q9pRztnMKX_5z_sI22eOCxksyliT6TVooRvTfGvGWdjbDRPUMEVA27jNgIsLq4x5-vwUSyA01Xpf5wojh5AhJeaIcDHDogpgjk4KnRzAHgIcs14tl6RFigX-H-t3yeeygreJvHSu92ioWBlWYDtGIZlXwW-ugzvspeDJtTZMKGhCpilcB7zvDinYh0Q2qJtmB4UtxUmzvPJTQNTjb54Tg6HzWerQ' }}
                         style={styles.profileImage}
                     />
                 </TouchableOpacity>
+
             </View>
 
             <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
@@ -219,7 +223,11 @@ const ActivitiesScreen = () => {
             </ScrollView>
 
             {/* FAB - Using View based icons */}
-            <TouchableOpacity style={styles.fab}>
+            <TouchableOpacity
+                style={styles.fab}
+                onPress={() => navigation.navigate('AddActivity')}
+            >
+
                 <View style={{ width: 30, height: 30, alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ width: 24, height: 4, backgroundColor: '#FFF', borderRadius: 2 }} />
                     <View style={{ position: 'absolute', width: 4, height: 24, backgroundColor: '#FFF', borderRadius: 2 }} />

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, StyleSheet, Animated, Text, Easing } from 'react-native';
+import { View, StyleSheet, Animated, Image, Text, Easing } from 'react-native';
 import useAppStartup from '../hooks/useAppStartup';
 
 const SplashScreen = () => {
@@ -48,15 +48,19 @@ const SplashScreen = () => {
           },
         ]}
       >
-        <View style={styles.logoCircle}>
-          <Text style={styles.leafIcon}>🌱</Text>
-        </View>
+        <Image
+          source={require('../../figma-pics/appLogo.png')}
+          style={styles.logo}
+          resizeMode="contain"
+        />
       </Animated.View>
 
-      <Animated.View style={{ opacity: fadeAnim }}>
-        <Text style={styles.title}>EcoGreen Campus</Text>
-        <Text style={styles.tagline}>Learn . Grow . Go Green</Text>
+      <Animated.View style={[styles.textContainer, { opacity: fadeAnim }]}>
+        <Text style={styles.title}>EcoCampus</Text>
+        <Text style={styles.brandingText}>track your green impact</Text>
       </Animated.View>
+
+
 
       <View style={styles.loadingContainer}>
         <Animated.View
@@ -77,31 +81,38 @@ const styles = StyleSheet.create({
   logoContainer: {
     marginBottom: 30,
   },
-  logoCircle: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    backgroundColor: '#FFFFFF',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 3,
-    borderColor: '#FFFFFF',
+  logo: {
+    width: 250,
+    height: 250,
   },
-  leafIcon: {
-    fontSize: 60,
+  textContainer: {
+
+    alignItems: 'center',
+    gap: 4,
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
+    fontSize: 36,
+    fontWeight: '900',
     color: '#FFFFFF',
-    marginBottom: 8,
+    letterSpacing: 1,
   },
-  tagline: {
+  brandingText: {
     fontSize: 16,
+    fontWeight: '600',
     color: '#FFFFFF',
     opacity: 0.9,
-    textAlign: 'center',
+    marginBottom: 20,
+    textTransform: 'lowercase',
   },
+  tagline: {
+    fontSize: 14,
+    color: '#FFFFFF',
+    opacity: 0.7,
+    textAlign: 'center',
+    fontStyle: 'italic',
+  },
+
+
   loadingContainer: {
     position: 'absolute',
     bottom: 80,

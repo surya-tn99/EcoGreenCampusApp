@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Profile - EcoCampus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7f32",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 max-w-2xl mx-auto w-full justify-between">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors text-primary">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold flex-1 text-center pr-10">Edit Profile</h1>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-6 max-w-2xl mx-auto w-full">
+<!-- Profile Image Section -->
+<div class="flex flex-col items-center mb-8">
+<div class="relative group">
+<div class="size-32 rounded-full border-4 border-primary/20 p-1 overflow-hidden bg-white dark:bg-slate-800">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Friendly female student avatar for profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8ccD5Y6Jmf3WfHS8FUYWSrAVdsK2LA_e_K-_OVNL9qI5wxOocKHlUC4E_-z7mLqHk9OY5nuVxnTUf-OKEdyfvHZ6aht52HFm9LcB735UVtqw7qj-W-87aezRZCU_MMMsyuxLqBS4oeEHgIgqRCAZtklF-3JcR6OGZSF9j8Uz7RJ-9pSojWVi6kfvhbkTjxA_Scjs0KC5-XycfWKoR_7ZboDfwiMflxHaEaPORXYBYWA8FKqk6O0_7d7YnEsGBgzKPF4apqf5T5y4");'>
+</div>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg border-2 border-background-light dark:border-background-dark hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<div class="mt-4 text-center">
+<h2 class="text-xl font-bold">Alex Green</h2>
+<p class="text-sm text-primary font-medium">Sustainability Enthusiast</p>
+</div>
+</div>
+<!-- Form Fields -->
+<form class="space-y-5">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">person</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-primary/20 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" type="text" value="Alex Green"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">mail</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-primary/20 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" type="email" value="alex.green@ecocampus.edu"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Phone Number</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">call</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-primary/20 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" type="tel" value="+1 (555) 123-4567"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Department</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">eco</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-primary/20 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" type="text" value="Sustainability"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">College</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">school</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-primary/20 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" type="text" value="EcoCampus University"/>
+</div>
+</div>
+<!-- Buttons -->
+<div class="pt-6 flex flex-col gap-3">
+<button class="w-full bg-gradient-to-r from-primary to-[#4caf50] text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity active:scale-[0.98]" type="submit">
+                    Save Changes
+                </button>
+<button class="w-full py-3 text-slate-500 dark:text-slate-400 font-medium hover:text-primary transition-colors" type="button">
+                    Cancel
+                </button>
+</div>
+</form>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-primary/10 px-6 py-3 flex justify-around items-center max-w-2xl mx-auto w-full">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">home</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-primary">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">eco</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-primary">Activities</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">emoji_events</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-primary">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary fill-[1]">account_circle</span>
+<span class="text-[10px] font-medium text-primary">Profile</span>
+</a>
+</nav>
+</body></html>

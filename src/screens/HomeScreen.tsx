@@ -9,6 +9,8 @@ import {
     SafeAreaView,
     StatusBar,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 const LeafIcon = ({ color = '#2e7f32', size = 16 }: { color?: string, size?: number }) => (
 
@@ -63,7 +65,9 @@ const ActivityIcon = ({ type, color = '#2e7f32', size = 24 }: { type: string, co
 };
 
 const HomeScreen = () => {
+    const navigation = useNavigation<any>();
     const [ecoScore, setEcoScore] = React.useState(120);
+
 
     const handleActivityPress = (points: string) => {
         const pts = parseInt(points.replace(/[^0-9]/g, ''));
@@ -83,8 +87,12 @@ const HomeScreen = () => {
                             <Text style={styles.scoreText}>{ecoScore} Eco Score</Text>
                         </View>
                     </View>
-                    <TouchableOpacity style={styles.profileContainer}>
+                    <TouchableOpacity
+                        style={styles.profileContainer}
+                        onPress={() => navigation.navigate('Profile')}
+                    >
                         <Image
+
                             source={{ uri: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB1_YsVMkllGb1L-GFekbtZKQr2HLgkslaOvlQEwd69aSKJQr-q9pRztnMKX_5z_sI22eOCxksyliT6TVooRvTfGvGWdjbDRPUMEVA27jNgIsLq4x5-vwUSyA01Xpf5wojh5AhJeaIcDHDogpgjk4KnRzAHgIcs14tl6RFigX-H-t3yeeygreJvHSu92ioWBlWYDtGIZlXwW-ugzvspeDJtTZMKGhCpilcB7zvDinYh0Q2qJtmB4UtxUmzvPJTQNTjb54Tg6HzWerQ' }}
                             style={styles.profileImage}
                         />

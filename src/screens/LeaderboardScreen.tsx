@@ -9,6 +9,8 @@ import {
     SafeAreaView,
     StatusBar,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 const EcoIcon = ({ color = '#2e7f32', size = 14 }: { color?: string, size?: number }) => (
 
@@ -26,7 +28,9 @@ const TrendingUpIcon = ({ color = '#FFF', size = 20 }: { color?: string, size?: 
 );
 
 const LeaderboardScreen = () => {
+    const navigation = useNavigation<any>();
     const [activePeriod, setActivePeriod] = React.useState('Today');
+
 
     const leaderboardData: any = {
         'Today': {
@@ -95,16 +99,20 @@ const LeaderboardScreen = () => {
 
             <View style={styles.fixedHeader}>
                 <View style={styles.headerTop}>
-                    <TouchableOpacity style={styles.backButton}>
+                    {/* <TouchableOpacity style={styles.backButton}>
                         <Text style={styles.backText}>←</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                     <Text style={styles.headerTitle}>Eco Leaderboard 🏆</Text>
-                    <TouchableOpacity style={styles.miniProfile}>
+                    <TouchableOpacity
+                        style={styles.miniProfile}
+                        onPress={() => navigation.navigate('Profile')}
+                    >
                         <Image
                             source={{ uri: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBcinqTIFvJN-EabUIxfvNnfOW-ADlQh_V2X5KJi94lGu1INCABMyPNO3YUVbTnc5SZgmDuLjSZ01OpLhRjyCNn5rNkm8DP30_wvxLn6YXc5mXB-RmwhVdAOzzWPh14prh8XmvscFQr_6q4FONYCnL-p0P89g5LlztavMnvauVZVru7j6eG9zqLFttyK9hWDFR8dK6lOoB5WCjEfAm26YhjAw5KaIyvZcQ71R93QUmr3f46mwnL_Ku6XDuKa1RGSpynBYZxCfHgpMM' }}
                             style={styles.profileImg}
                         />
                     </TouchableOpacity>
+
                 </View>
                 <Text style={styles.mainTitle}>Top students making the campus greener</Text>
                 <Text style={styles.subtitleText}>Earn eco points by completing sustainability activities.</Text>
@@ -221,12 +229,12 @@ const LeaderboardScreen = () => {
             </ScrollView>
 
             {/* FAB */}
-            <TouchableOpacity style={styles.fab}>
+            {/* <TouchableOpacity style={styles.fab}>
                 <View style={{ width: 30, height: 30, alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ width: 20, height: 4, backgroundColor: '#FFF', borderRadius: 2 }} />
                     <View style={{ position: 'absolute', width: 4, height: 20, backgroundColor: '#FFF', borderRadius: 2 }} />
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </SafeAreaView>
     );
 };

@@ -14,6 +14,14 @@ import ActivitiesScreen from '../screens/ActivitiesScreen';
 import LeaderboardScreen from '../screens/LeaderboardScreen';
 import ComplaintScreen from '../screens/ComplaintScreen';
 import ComplaintConfirmationScreen from '../screens/ComplaintConfirmationScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import EditProfileScreen from '../screens/EditProfileScreen';
+import SettingsScreen from '../screens/SettingsScreen';
+import AddActivityScreen from '../screens/AddActivityScreen';
+
+
+
+
 
 
 
@@ -27,7 +35,15 @@ type RootStackParamList = {
   MainApp: undefined;
   ComplaintScreen: undefined;
   ComplaintConfirmationScreen: undefined;
+  Profile: undefined;
+  EditProfile: undefined;
+  Settings: undefined;
+  AddActivity: undefined;
 };
+
+
+
+
 
 type MainTabParamList = {
   Home: undefined;
@@ -47,8 +63,10 @@ const TabIcon = ({ name, color, focused }: { name: string, color: string, focuse
     case 'Home':
       return (
         <View style={iconBaseStyle}>
-          <View style={{ width: size * 0.7, height: size * 0.6, borderWidth: 2, borderColor: color, borderBottomWidth: 0, borderTopLeftRadius: 2, borderTopRightRadius: 2 }} />
-          <View style={{ width: size * 0.9, height: 2, backgroundColor: color, position: 'absolute', bottom: 4 }} />
+          {/* Modern Industrial Home: Geometric Building Silhouette */}
+          <View style={{ width: size * 0.4, height: size * 0.7, borderWidth: 2, borderColor: color, position: 'absolute', left: 2, bottom: 2, borderRadius: 1 }} />
+          <View style={{ width: size * 0.35, height: size * 0.4, borderWidth: 2, borderColor: color, position: 'absolute', right: 2, bottom: 2, borderRadius: 1 }} />
+          <View style={{ width: size * 0.6, height: 2, backgroundColor: color, position: 'absolute', top: 6, left: 4, transform: [{ rotate: '-30deg' }] }} />
         </View>
       );
     case 'Activities':
@@ -60,11 +78,14 @@ const TabIcon = ({ name, color, focused }: { name: string, color: string, focuse
     case 'Leaderboard':
       return (
         <View style={iconBaseStyle}>
-          <View style={{ width: size * 0.2, height: size * 0.6, backgroundColor: color, marginHorizontal: 1 }} />
-          <View style={{ width: size * 0.2, height: size * 0.8, backgroundColor: color, marginHorizontal: 1 }} />
-          <View style={{ width: size * 0.2, height: size * 0.4, backgroundColor: color, marginHorizontal: 1 }} />
+          {/* Modern Industrial Leaderboard: Structural Podium */}
+          <View style={{ width: size * 0.25, height: size * 0.4, backgroundColor: color, borderTopRightRadius: 2, borderTopLeftRadius: 2, marginRight: 2 }} />
+          <View style={{ width: size * 0.25, height: size * 0.7, backgroundColor: color, borderTopRightRadius: 2, borderTopLeftRadius: 2 }} />
+          <View style={{ width: size * 0.25, height: size * 0.3, backgroundColor: color, borderTopRightRadius: 2, borderTopLeftRadius: 2, marginLeft: 2 }} />
+          <View style={{ width: size * 0.9, height: 2, backgroundColor: color, position: 'absolute', bottom: 0 }} />
         </View>
       );
+
     default:
       return null;
   }
@@ -117,7 +138,15 @@ const AppNavigator = () => {
         <Stack.Screen name="MainApp" component={MainTabNavigator} />
         <Stack.Screen name="ComplaintScreen" component={ComplaintScreen} />
         <Stack.Screen name="ComplaintConfirmationScreen" component={ComplaintConfirmationScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen name="AddActivity" component={AddActivityScreen} />
       </Stack.Navigator>
+
+
+
+
     </NavigationContainer>
   );
 };

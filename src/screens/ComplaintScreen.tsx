@@ -112,9 +112,9 @@ const ComplaintScreen = () => {
                         </TouchableOpacity>
                         <Text style={styles.headerTitle}>Campus Complaint Center</Text>
                     </View>
-                    <TouchableOpacity style={styles.notifButton}>
+                    {/* <TouchableOpacity style={styles.notifButton}>
                         <NotificationIcon />
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
                 <Text style={styles.headerSubtitle}>
                     Report issues and help maintain a clean and sustainable campus for everyone.
